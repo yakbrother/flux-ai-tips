@@ -2,6 +2,8 @@
 
 *Create new and better AI images with camera techniques, lighting setups, and artistic styles*
 
+Created with Help and Research from Claude.AI, with direction by Tim Eaton.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
@@ -11,11 +13,14 @@
 - [Flux Models & Configuration](#flux-models--configuration)
 - [Seeds & Reproducibility](#seeds--reproducibility)
 - [Start Images & Img2Img](#start-images--img2img)
+- [Text Rendering & Typography](#text-rendering--typography)
+- [Prompt Structure & Word Order](#prompt-structure--word-order)
 - [Camera Techniques](#camera-techniques)
 - [Lighting Mastery](#lighting-mastery)
 - [Art Styles & Movements](#art-styles--movements)
 - [Advanced Prompting](#advanced-prompting)
 - [Quality Modifiers](#quality-modifiers)
+- [Ethical Considerations](#ethical-considerations)
 - [Common Mistakes](#common-mistakes)
 - [Example Prompts](#example-prompts)
 - [Contributing](#contributing)
@@ -31,7 +36,7 @@ Flux AI excels at understanding detailed photographic and artistic terminology. 
 
 **Example:**
 ```
-Portrait of a woman, shot with 85mm lens, golden hour lighting, in the style of Annie Leibovitz, highly detailed, professional photography
+Portrait of a woman, shot with 85mm lens, golden hour lighting, dramatic studio lighting style, highly detailed, professional photography
 ```
 
 ## Flux Models & Configuration
@@ -494,20 +499,20 @@ prompts: [
 ### Photography Styles
 
 #### 📸 **Classic Photography**
-- `Ansel Adams style` - Dramatic landscapes, zone system
-- `Henri Cartier-Bresson` - Decisive moment, street photography
-- `Annie Leibovitz portrait` - Celebrity portraiture, dramatic lighting
-- `Richard Avedon fashion` - High contrast, dynamic poses
-- `Vivian Maier aesthetic` - Street photography, human moments
-- `Steve McCurry style` - Travel photography, vibrant colors
+- `film noir photography` - High contrast black and white, dramatic shadows
+- `street photography aesthetic` - Candid moments, authentic human emotion
+- `fashion photography style` - High-end editorial, dramatic poses and lighting
+- `documentary photography` - Authentic storytelling, natural moments
+- `fine art photography` - Gallery-worthy composition and technique
+- `vintage portrait photography` - Classic techniques and timeless appeal
 
 #### 🎨 **Contemporary Photography**
-- `Gregory Crewdson style` - Cinematic, suburban surrealism
-- `Andreas Gursky` - Large format, architectural precision
-- `Cindy Sherman aesthetic` - Conceptual self-portraits
-- `David LaChapelle` - Hyperreal, pop surrealism
-- `Tim Walker photography` - Whimsical, fashion fantasy
-- `Peter Lindbergh style` - Black and white, natural beauty
+- `cinematic photography` - Film-like composition and lighting
+- `architectural photography` - Clean lines, geometric precision
+- `conceptual photography` - Artistic interpretation, creative vision
+- `hyperreal photography` - Vivid colors, surreal perfection
+- `editorial fashion photography` - High-end magazine aesthetic
+- `minimalist photography` - Clean composition, natural beauty
 
 ### Digital Art Styles
 
@@ -545,13 +550,13 @@ prompts: [
 - `Art Deco style` - Geometric patterns, luxury aesthetic
 - `Pop art style` - Bold colors, commercial imagery
 
-#### 🌟 **Iconic Artists**
-- `Van Gogh style` - Swirling brushstrokes, emotional color
-- `Picasso cubist` - Geometric forms, multiple perspectives
-- `Monet impressionist` - Light studies, atmospheric effects
-- `Dali surrealism` - Dreamlike, impossible imagery
-- `Warhol pop art` - Repetition, commercial techniques
-- `Basquiat style` - Raw expression, text elements
+#### 🌟 **Iconic Art Movements**
+- `post-impressionist style` - Bold colors, emotional expression
+- `cubist composition` - Geometric forms, multiple perspectives
+- `impressionist painting` - Light studies, atmospheric effects
+- `surrealist art` - Dreamlike, impossible imagery
+- `pop art aesthetic` - Bold colors, commercial techniques
+- `expressionist painting` - Raw emotion, dynamic brushwork
 
 ## Advanced Prompting
 
@@ -559,9 +564,9 @@ prompts: [
 
 #### 🎯 **Layered Descriptions**
 ```
-Portrait of a jazz musician, shot with vintage Leica M6, 
+Portrait of a jazz musician, shot with vintage film camera, 
 Kodak Tri-X film, available light from club window, 
-in the style of William Claxton, high contrast black and white, 
+classic documentary photography style, high contrast black and white, 
 film grain visible, authentic 1960s aesthetic
 ```
 
@@ -569,7 +574,7 @@ film grain visible, authentic 1960s aesthetic
 ```
 Cyberpunk street scene, shot on medium format film camera,
 neon lighting mixed with natural fog, 
-Blade Runner aesthetic meets Vivian Maier composition,
+Blade Runner aesthetic meets candid street photography composition,
 high detail, cinematic color grading
 ```
 
@@ -638,6 +643,87 @@ high detail, cinematic color grading
 - `contemporary [style]` - Modern interpretation
 - `vintage [era] aesthetic` - Period-specific look
 - `fine art photography` - Gallery-worthy artistic quality
+
+## Ethical Considerations
+
+### Respecting Artists and Their Work
+
+When using AI to generate images inspired by specific artists, it's important to approach this responsibly and ethically.
+
+#### 🎭 **Artist Attribution & Respect**
+
+**Living Artists:**
+- **Consider impact**: Be mindful that copying a living artist's style may affect their livelihood
+- **Give credit**: Always acknowledge the artist when sharing AI-generated work inspired by them
+- **Use sparingly**: Avoid saturating platforms with imitations of a specific artist's work
+- **Educational use**: Focus on learning techniques rather than commercial exploitation
+
+**Historical Artists:**
+- **Public domain**: Most classical artists (pre-1900s) are in public domain
+- **Cultural respect**: Approach cultural and religious art with sensitivity
+- **Context matters**: Understand the historical and cultural significance of the style
+
+#### ⚖️ **Ethical Guidelines**
+
+**✅ DO:**
+- Study and learn from artistic techniques and movements
+- Use artist references for personal education and experimentation
+- Combine multiple influences to create something new
+- Credit artists when sharing work inspired by them
+- Focus on technical aspects (lighting, composition) rather than direct copying
+- Use historical styles and movements as inspiration
+
+**❌ DON'T:**
+- Mass-produce work in a living artist's exact style for commercial gain
+- Claim AI-generated work as original when directly copying an artist's style
+- Ignore artist requests to not use their style for AI training/generation
+- Flood markets with imitations that could devalue original work
+- Use AI to replicate an artist's work without understanding or respecting their contribution
+
+#### 🤝 **Alternative Approaches**
+
+**Instead of**: `"in the style of [living artist name]"`
+**Try**: 
+```
+"Portrait photography with dramatic lighting and rich color palette"
+"Fashion photography with bold composition and striking contrasts"
+"Contemporary digital art with surreal elements and vivid colors"
+```
+
+**Genre-based alternatives:**
+```
+"Film noir photography" instead of copying a specific photographer
+"Impressionist painting style" instead of "in the style of Monet"
+"Street photography aesthetic" instead of copying Vivian Maier specifically
+"Renaissance portrait lighting" instead of copying a specific master
+```
+
+#### 📚 **Educational Mindset**
+
+**Learning from masters:**
+- Study what makes their work distinctive (lighting, composition, color theory)
+- Understand the historical context and techniques they pioneered
+- Apply these learnings to create your own unique vision
+- Build upon artistic traditions rather than simply copying them
+
+**Example of respectful learning:**
+```
+Original prompt: "Portrait in celebrity photography style"
+Educational approach: "Celebrity portrait with dramatic studio lighting, 
+strong directional shadows, and bold composition reminiscent of high-end 
+fashion photography"
+```
+
+#### 🌍 **Community Responsibility**
+
+As AI art creators, we have a responsibility to:
+- **Foster creativity** rather than replace human artists
+- **Support the art community** by purchasing original work when possible
+- **Educate others** about ethical AI art practices
+- **Advocate for artists' rights** in the age of AI
+- **Create responsibly** with consideration for the broader impact
+
+**Remember**: The goal is to learn from the masters and create new art, not to replace or diminish their contributions to the artistic world.
 
 ## Common Mistakes
 
@@ -770,11 +856,18 @@ We welcome contributions to improve this guide! Please:
 ### Areas for Contribution
 
 - New camera techniques and lenses
-- Additional lighting setups
+- Additional lighting setups  
 - Emerging art styles and trends
 - Cultural and regional photography styles
 - Specialized photography genres (macro, astrophotography, etc.)
 - More example prompts with results
+- Seed databases for different styles
+- ControlNet technique guides
+- Advanced img2img workflows
+- Model comparison studies
+- Typography and text rendering examples
+- Word order optimization strategies
+- Prompt structure templates
 
 ## License
 
