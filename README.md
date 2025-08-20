@@ -1,6 +1,6 @@
-# The Complete Flux AI Image Generation Guide
+# The Flux AI Image Generation Guide
 
-*Master the art of AI image creation with camera techniques, lighting setups, and artistic styles*
+*Create new and better AI images with camera techniques, lighting setups, and artistic styles*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
