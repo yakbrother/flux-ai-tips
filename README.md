@@ -298,14 +298,43 @@ Throughout this book, we use universal parameter names. Here's how they appear i
 | `scheduler: euler_a` | In sampler nodes | "Sampling method" | Auto-handled | Generation algorithm |
 
 ### Basic Prompt Structure
+
+The foundation of every great Flux AI image follows this proven formula:
+
 ```
 [Subject] + [Camera/Lens] + [Lighting] + [Art Style] + [Quality Modifiers]
 ```
 
-**Example:**
+**Visual Breakdown:**
+
 ```
-Portrait of a woman, shot with 85mm lens, golden hour lighting, dramatic studio lighting style, highly detailed, professional photography
+┌─────────────────────────────────────────────────────────────┐
+│                    PROMPT STRUCTURE                         │
+├─────────────────────────────────────────────────────────────┤
+│ Subject          │ "Portrait of a woman"                    │
+│ Camera/Lens      │ + "shot with 85mm lens"                  │
+│ Lighting         │ + "golden hour lighting"                 │
+│ Art Style        │ + "dramatic studio photography style"    │
+│ Quality          │ + "highly detailed, professional"        │
+├─────────────────────────────────────────────────────────────┤
+│ RESULT           │ Professional portrait with specific      │
+│                  │ technical and artistic characteristics   │
+└─────────────────────────────────────────────────────────────┘
 ```
+
+**Complete Example:**
+```
+Portrait of a woman, shot with 85mm lens, golden hour lighting, 
+dramatic studio photography style, highly detailed, professional photography
+```
+
+**Progressive Building Method:**
+
+1. **Start Simple**: "Portrait of a woman"
+2. **Add Technical**: "Portrait of a woman, shot with 85mm lens"  
+3. **Define Lighting**: "Portrait of a woman, shot with 85mm lens, golden hour lighting"
+4. **Specify Style**: "Portrait of a woman, shot with 85mm lens, golden hour lighting, dramatic studio photography style"
+5. **Enhance Quality**: "Portrait of a woman, shot with 85mm lens, golden hour lighting, dramatic studio photography style, highly detailed, professional photography"
 
 ## Flux Models & Configuration
 
@@ -405,33 +434,63 @@ A **seed** is a number that controls the randomness in AI generation. Same seed 
 
 #### 🎯 **The Seed Discovery Process**
 
-1. **Initial Generation** (Random Seeds)
-   ```
-   Prompt: "Portrait of a woman, golden hour lighting"
-   Seed: Random
-   Generate: 4-8 images
-   ```
+**Visual Workflow:**
 
-2. **Identify Best Composition**
-   ```
-   Best result seed: 1847362819
-   Save this seed for refinement
-   ```
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│ EXPLORATION     │    │ REFINEMENT      │    │ OPTIMIZATION    │
+│                 │    │                 │    │                 │
+│ Random Seeds    │───▶│ Fixed Best Seed │───▶│ Seed Variations │
+│ Basic Prompt    │    │ Improve Prompt  │    │ Final Selection │
+│ 4-8 Images      │    │ Multiple Tests  │    │ Perfect Result  │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+       │                       │                       │
+       ▼                       ▼                       ▼
+"Find the Magic"        "Perfect the Prompt"    "Polish & Deliver"
+```
 
-3. **Prompt Refinement** (Fixed Seed)
-   ```
-   Seed: 1847362819 (kept constant)
-   Prompt iterations:
-   - "Portrait of a woman, golden hour lighting, 85mm lens"
-   - "Portrait of a woman, golden hour lighting, 85mm lens, film photography"
-   - "Portrait of a woman, golden hour lighting, 85mm lens, Kodak Portra 400"
-   ```
+**Step-by-Step Process:**
 
-4. **Final Variations** (Seed Range)
-   ```
-   Final prompt + seeds: 1847362819, 1847362820, 1847362821
-   Choose best final result
-   ```
+**1. Initial Generation** (Random Seeds)
+```
+Prompt: "Portrait of a woman, golden hour lighting"
+Seed: Random (-1 or leave empty)
+Generate: 4-8 images
+Goal: Find compelling composition
+```
+
+**2. Identify Best Composition**
+```
+Review Results → Select Best Image → Note Seed Number
+Best result seed: 1847362819
+Save this seed for refinement phase
+```
+
+**3. Prompt Refinement** (Fixed Seed)
+```
+Seed: 1847362819 (kept constant for fair comparison)
+
+Prompt Evolution:
+Iteration 1: "Portrait of a woman, golden hour lighting, 85mm lens"
+Iteration 2: "Portrait of a woman, golden hour lighting, 85mm lens, film photography"
+Iteration 3: "Portrait of a woman, golden hour lighting, 85mm lens, Kodak Portra 400"
+```
+
+**4. Final Variations** (Seed Range)
+```
+Use perfected prompt with seed variations:
+- Seed 1847362819 (original)
+- Seed 1847362820 (+1 variation)
+- Seed 1847362821 (+2 variation)
+
+Choose best final result for delivery
+```
+
+**Pro Tips for Seed Discovery:**
+- **Document Everything**: Keep a spreadsheet of successful seeds and prompts
+- **Test in Batches**: Generate multiple seeds simultaneously for efficiency
+- **Version Control**: Name files with seed numbers for easy tracking
+- **Quality Threshold**: Only proceed to refinement with truly promising compositions
 
 #### 📊 **Seed Organization**
 ```
@@ -1341,11 +1400,55 @@ client-focused result, professional quality, business impact
 - Contracts for client work and usage rights
 - Copyright considerations for AI-generated content
 
-**Pricing Strategies:**
-- **Time-based**: Hourly rates ($50-150/hour)
-- **Project-based**: Fixed fees for defined deliverables
-- **Value-based**: Pricing based on client budget and impact
-- **Retainer model**: Monthly fees for ongoing services
+### **Pricing Strategy Framework**
+
+**Four-Tier Pricing Model:**
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    PRICING TIER STRUCTURE                   │
+├─────────────────┬───────────────┬───────────────┬───────────┤
+│     STARTER     │    STANDARD   │   PREMIUM     │ ENTERPRISE│
+├─────────────────┼───────────────┼───────────────┼───────────┤
+│ Single Images   │ Small Package │ Brand Package │ Full Service│
+│ $25-75 each     │ $200-500      │ $500-2000     │ $2000+ monthly│
+│                 │               │               │           │
+│ • Basic prompts │ • 5-15 images │ • 20-50 images│ • Unlimited │
+│ • Standard res  │ • 2 revisions │ • Brand guide │ • Dedicated │
+│ • 24hr delivery │ • Style guide │ • 3 revisions │ • Account mgr│
+│ • 1 revision    │ • Hi-res files│ • Commercial  │ • Priority  │
+│                 │               │   license     │ • Custom SLA│
+└─────────────────┴───────────────┴───────────────┴───────────┘
+```
+
+**Pricing Model Comparison:**
+
+| Model | Rate Range | Best For | Pros | Cons |
+|-------|------------|----------|------|------|
+| **Hourly** | $50-150/hr | Complex projects | Fair compensation | Hard to estimate |
+| **Project** | Fixed fee | Defined scope | Predictable profit | Scope creep risk |
+| **Value** | % of budget | High-impact work | Maximum profit | Requires negotiation |
+| **Retainer** | Monthly fee | Ongoing clients | Steady income | Commitment required |
+
+**ROI Calculation for Clients:**
+
+```
+Traditional Photography vs AI-Enhanced:
+┌─────────────────────────────────────────────┐
+│ Traditional: $2000 shoot + $500 editing    │
+│ Timeline: 2 weeks                           │
+│ Revisions: Limited                          │
+│ Total Cost: $2500                           │
+└─────────────────────────────────────────────┘
+                     vs
+┌─────────────────────────────────────────────┐
+│ AI-Enhanced: $800 generation + $200 editing│
+│ Timeline: 3 days                            │
+│ Revisions: Unlimited                        │
+│ Total Cost: $1000                           │
+│ SAVINGS: $1500 (60% reduction)             │
+└─────────────────────────────────────────────┘
+```
 
 **Tools and Software:**
 - Professional editing software (Photoshop, Lightroom)
